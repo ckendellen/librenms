@@ -6,7 +6,7 @@ path: blob/master/doc/
 > at `mysql>` prompts) or temporarily become a user with root
 > privileges with `sudo -s` or `sudo -i`.
 
-**Please note the minimum supported PHP version is 7.1.3**
+**Please note the minimum supported PHP version is 7.2.5**
 
 
 ## Install Common Required Packages ##
@@ -29,21 +29,16 @@ There are multiple ways to install php 7.x on CentOS 7, like Webtatic, Remi or S
 ```
 yum localinstall http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 ```
+Install the yum-config-manager to change to Remi PHP 7.3 Repo.
+```
+yum install yum-utils
+yum-config-manager --enable remi-php73
+```
+Install the required packages
 
 ```
-yum install php73-mod_php php73-php-cli php73-php-common php73-php-curl php73-php-gd php73-php-mbstring php73-php-process php73-php-snmp php73-php-xml php73-php-zip php73-php-memcached php73-php-mysqlnd
+yum install mod_php php-cli php-common php-curl php-gd php-mbstring php-process php-snmp php-xml php-zip php-memcached php-mysqlnd
 ```
-
-#### Running with Webtatic PHP
-
-```
-rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-```
-
-```
-yum install php72w php72w-cli php72w-common php72w-curl php72w-gd php72w-mbstring php72w-mysqlnd php72w-process php72w-snmp php72w-xml php72w-zip
-```
-
 
 #### Running with CentOS SCL php
 
