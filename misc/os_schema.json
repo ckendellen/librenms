@@ -137,6 +137,9 @@
                 "ucd-diskio": {
                     "type": "boolean"
                 },
+                "sensors": {
+                    "type": "boolean"
+                },
                 "services": {
                     "type": "boolean"
                 },
@@ -530,7 +533,8 @@
                 "not_contains",
                 "not_regex",
                 "in_array",
-                "not_in_array"
+                "not_in_array",
+                "exists"
             ]
         }
     }
